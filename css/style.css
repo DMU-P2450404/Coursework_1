@@ -1,0 +1,66 @@
+a {
+  text-decoration: none; /*This removes the underlink from hyperlinks that use the anchor element*/
+}
+
+.page_content {
+  margin: 0% 5%; /*setting all of the margins in one line: top and bottom, left and right*/
+}
+
+.spacer {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.title_block {
+  text-align: left;
+  background-color: #2a3140;
+  margin: -23px -23px 0px -23px; /*setting all of the margins in one line: top, right, bottom, left*/
+  padding: 10px 0px 18px 20px; /*setting all of the padding in one line: top, right, bottom, left*/
+}
+
+#title {
+  color: #ffffff;
+  font-family: Nanum Gothic; /*I have only specificed one font as it comes from an exteral website. So it should work will all broswers*/
+  font-weight: 450;
+  margin-bottom: 1px;
+}
+
+#year {
+  color: #d4e2ff;
+  font-family: Nanum Gothic;
+  font-weight: 450;
+  font-size: 70%;
+}
+
+#original_title {
+  color: #d4e2ff;
+  font-family: Nanum Gothic;
+  font-weight: 450;
+  font-size: 65%;
+}
+
+.sub_text {
+  color: #d4e2ff;
+  font-family: Nanum Gothic;
+  font-weight: 450;
+  font-size: 65%;
+  margin-top: 2px;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 15px;
+  background-color: rgb(16, 30, 56);
+  padding: 7px;
+  width: 70px;
+  margin: 4px 2px;
+  text-align: center;
+  font-family: Nanum Myeogjo; /*I have only specificed one font as it comes from an exteral website. So it should work will all broswers*/
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgb(0, 91, 165);
+}
