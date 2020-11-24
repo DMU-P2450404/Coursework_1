@@ -1,0 +1,43 @@
+<!--Currently set up to test a tutorial for a responsive top navigation bar: https://www.w3schools.com/howto/howto_js_topnav_responsive.asp-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>[Test] Top Navigation Bar</title>
+    <link href="css/test_style_TopNav.css" rel="stylesheet" type="text/css"/>
+    <script src="https://use.fontawesome.com/a066ea0406.js"></script> <!--This will be used to get icons from this website-->
+  </head>
+  <body>
+    <div class="topnav" id="myTopNav">
+      <a href="#home" class="active">Home</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+      <!--Toggle between adding and removing the "responsive" class to the top navigation bar when the user clicks on the icon-->
+      <script>
+      function myFunction() {
+        var x = document.getElementById("myTopNav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+      </script>
+
+      <div>
+        <p style="padding: 0px 15px 2500px">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        <br>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+
+  </body>
+</html>

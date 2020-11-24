@@ -1,36 +1,132 @@
 <!DOCTYPE html>
-<html lang="en, ko" dir="ltr"> <!--Adding ko after lang defines the page as being in Korean as well as English-->
+<!--Adding ko after lang defines the page as being in Korean as well as English-->
+<html lang="en, ko" dir="ltr">
   <head>
-    <meta charset="utf-8" name="viewport" content="width=device-width"/>
-    <title>조선마술사 The Magician | K Movie</title>
-    <link href="http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css" rel="stylesheet" media="screen" type="text/css"/> <!--This link is for a Korean font. HTML cannot be use in a css file, so it is placed here-->
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>조선마술사 The Magician | home</title>
+    <!--These links are for a Korean fonts-->
+    <link href="https://fonts.googleapis.com/earlyaccess/nanummyeongjo.css" rel="stylesheet" media="screen" type="text/css"/>
     <link href="https://fonts.google.com/specimen/Nanum+Gothic?subset=korean#standard-styles" rel="stylesheet" media="screen" type="text.css"/>
-    <link href="css/style.css" rel="stylesheet" tyle="text/css"/> <!--This is linking to my external css file-->
+    <!--This will be used to get icons from this website-->
+    <script src="https://use.fontawesome.com/a066ea0406.js"></script>
+    <!--This is linking to my external css file-->
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
   </head>
   <body>
-    <div class="page_content"> <!--Making all the page content sit in the center with borders on either side-->
-      <div class="title_block"> <!--Title section-->
+    <!--Creating a top navigation bar-->
+    <nav class="topnav" id="myTopNav">
+      <a href="index.html"><img src="img/logo.png" alt="logo" id="logo"/></a>
+      <a href="cast.html">Cast</a>
+      <a href="#crew">Crew</a>
+      <a href="#technical_aspects">Technical Aspects</a>
+      <!--This anchor element is for the javascript that will show the menu icon that will be present on smaller screens-->
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+      <!--This is the div for the search bar-->
+      <div class="search_container">
+      <!--The link in the action attribute is for the IMDb website search-->
+        <form action="https://www.imdb.com/find?q=" rel="search">
+          <!--name="q" comes from the IMDb website code in order for the search url to be formatted correctly-->
+          <input name="q" type="text" type="submit" placeholder="Search IMDb...">
+          <!--This adds a bit on the end of the input from the user to enable the search url to be correct for the IMDb website-->
+          <input type="hidden" name="ref_" value="nv_sr_sm">
+          <!--The i element is getting the search icon from the webiste in the head element-->
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    </nav>
+
+      <!--This bit of JavaScript is toggling between adding and removing the "responsive" class to the top navigation bar when the user clicks on the icon-->
+      <script>
+      function myFunction() {
+        var x = document.getElementById("myTopNav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+      </script>
+
+    <!--This <main> element is making it easier for the navigation bar and title block to be a different width to the main bit of the page-->
+    <main>
+
+      <!--Title section-->
+      <div class="title_block">
+        <!--Title line with year-->
         <h1 id="title">
           조선마술사 The Magician
           <span id="year">
             (2015)
           </span>
         </h1>
-        <div id="original_title"> <!--Original title section-->
+        <!--The original title/pronounication-->
+        <div id="original_title">
           Original title: Chosun Masoolsa
         </div>
-        <div class="sub_text"> <!--Extra information about the film section-->
+        <!--Extra information about the film-->
+        <div class="sub_text">
           <time>2h 2min</time>
-          <span class="spacer">|</span> <!--These spacer classes add a small gap and a line between each bit of information-->
-          Drama, fantasy, romance
+          <!--These "spacer" classes add a small gap and a line between each bit of information-->
+          <span class="spacer">|</span>
+            Drama, fantasy, romance
           <span class="spacer">|</span>
           30th December 2015 (South Korea)
         </div>
       </div>
-      <nav> <!--Menu navigation section--> <!--Uses relative URLs to link to the two pages of the website-->
-        <a class="button" href="index.html">Home</a>
-        <a class="button" href="cast.html">Cast</a>
-      </nav>
-    </div>
+
+      <!--Creating a section for the poster and the plot summary-->
+      <section class="PosterWithPlotSummary floatfix">
+        <!--<div> for the poster-->
+        <div class="floatfix">
+          <img src="img/poster.jpg" alt="The Magician poster" id="poster"/>
+        </div>
+        <!--<div> for the plot summary-->
+        <div class="plot_summary">
+          <p>During the Joseon dynasty in Korea, the princess travels to the Qing to have a beneficial marriage. On her journey to the Qing, she meets and falls in love with a magician.</p>
+          <p><span class="label">Director: </span><a href="https://www.imdb.com/name/nm0453413/?ref_=fn_al_nm_1">Dae-seung Kim</a></p>
+          <p><span class="label">Writer: </span><a href="https://www.imdb.com/name/nm8694244/?ref_=fn_al_nm_2">Won-Tae Lee</a> (original writer)</p>
+          <p><span class="label">Stars: </span><a href="https://www.imdb.com/name/nm2270541/?ref_=fn_al_nm_1">Ara Go</a>, <a href="https://www.imdb.com/name/nm1235558/?ref_=fn_al_nm_1">Seung-ho Yoo</a></p>
+        </div>
+      </section>
+
+      <!--Creating a section for the trailers-->
+      <section class="trailers">
+        <h2>Trailers</h2>
+        <h3>English trailer</h3>
+        <!--<figure> element used so I can add a <figcaption> element to the video-->
+        <figure>
+          <video controls="true" poster="vid/eng_cover.png">
+            <source src="vid/Trailer_Eng_Sub.ogv" type="video/ogg"/>
+            <source src="vid/Trailer_Eng_Sub.webm" type="video/webm"/>
+            <source src="vid/Trailer_Eng_Sub.mp4" type="video/mp4"/>
+          </video>
+          <figcaption>Cover sourced from: https://asian-film.com/en/chosun-masoolsa/ <br>Video sourced from: https://www.youtube.com/watch?v=HxBZ_Xtfii4</figcaption>
+          <!--Adding a fallback-->
+          <p class="fallback">If your browser cannot use the video element, you can download the video <a href="vid/Trailer_Eng_Sub.mp4">here</a>.</p>
+        </figure>
+
+        <h3>Korean trailer</h3>
+        <!--<figure> element used so I can add a <figcaption> element to the video-->
+        <figure>
+          <video controls="true" poster="vid/kor_cover.jpg">
+            <source src="vid/Trailer_Ext_Kor.ogv" type="video/ogg"/>
+            <source src="vid/Trailer_Ext_Kor.webm" type="video/webm"/>
+            <source src="vid/Trailer_Ext_Kor.mp4" type="video/mp4"/>
+          </video>
+          <figcaption>Cover sourced from: http://www.ciaokpop.com/il-film-joseon-magician-con-yoo-seung-ho-sta-per-arrivare-in-sala/ <br>Video sourced from: https://www.youtube.com/watch?v=iMVLBlMGpj4</figcaption>
+          <p class="fallback">If your browser cannot use the video element, you can download the video <a href="vid/Trailer_Ext_Kor.mp4">here</a>.</p>
+        </figure>
+      </secion>
+
+    </main>
+
+    <footer>
+      <p>Abbie Waterson P2450404
+      <br>
+      All of the information came from the IMDb website: <a href="https://www.imdb.com/title/tt4471636/">here</a></p>
+    </footer>
+
   </body>
 </html>

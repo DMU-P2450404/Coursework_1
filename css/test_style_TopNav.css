@@ -1,0 +1,63 @@
+/*Currently set up to test a tutorial for a responsive top navigation bar: https://www.w3schools.com/howto/howto_js_topnav_responsive.asp*/
+
+body {
+  margin: 0;
+}
+
+/*Adding a background colour to the top navigation*/
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/*Adding style to the links in the navigation bar*/
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px; /*top and bottom, then left and right*/
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/*Changing the colour of the links when they are hovered over*/
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/*Making the active class anchor element a different colour*/
+.topnav a.active {
+  background-color: #4caf50;
+  color: white;
+}
+
+/*Hiding the link that should open and close the top navigation on small screens*/
+.topnav .icon {
+  display: none;
+}
+
+/*When the screen is less than 600px wide, all of the links hide, except for the first one (home). It will show the link that contains should open and close the top navigation bar (.icon)*/
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/*The "responsive" class is added to the top navigation bar with JavaScript when the user clicks on the icon. This class makes the top navigation bar look good on small screens (displays the links vertically instead of horizonally)*/
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}

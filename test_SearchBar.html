@@ -1,0 +1,31 @@
+<!--Currently set up to test a tutorial for a search bar: https://www.w3schools.com/howto/howto_css_searchbar.asp-->
+<!--I have also made it so the serch bar goes to the IMDb website as a search with the user's input as the search-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>[Test] Search Bar</title>
+    <link href="css/test_style_SearchBar.css" rel="stylesheet" type="text/css"/>
+    <!--This will be used to get icons from this website-->
+    <script src="https://use.fontawesome.com/a066ea0406.js"></script>
+  </head>
+  <body>
+    <div class="topnav">
+      <a href="#home" class="active">Home</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+      <div class="search-container">
+        <!--The link in the action attribute is for the IMDb website search-->
+        <form action="https://www.imdb.com/find?q=" rel="search">
+          <!--name="q" comes from the IMDb website code in order for the search url to be formatted correctly-->
+          <input name="q" type="text" type="submit" placeholder="Search IMDb...">
+          <!--This adds a bit on the end of the input from the user to enable the search url to be correct for the IMDb website-->
+          <input type="hidden" name="ref_" value="nv_sr_sm">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--Adding ko after lang defines the page as being in Korean as well as English-->
+<html lang="en, ko" dir="ltr">
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>조선마술사 The Magician | cast</title>
+    <!--These links are for a Korean fonts-->
+    <link href="https://fonts.googleapis.com/earlyaccess/nanummyeongjo.css" rel="stylesheet" media="screen" type="text/css"/>
+    <link href="https://fonts.google.com/specimen/Nanum+Gothic?subset=korean#standard-styles" rel="stylesheet" media="screen" type="text.css"/>
+    <!--This will be used to get icons from this website-->
+    <script src="https://use.fontawesome.com/a066ea0406.js"></script>
+    <!--This is linking to my external css file-->
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <!--Creating a top navigation bar-->
+    <nav class="topnav" id="myTopNav">
+      <a href="index.html"><img src="img/logo.png" alt="logo" id="logo"/></a>
+      <a href="cast.html" class="active">Cast</a>
+      <a href="#crew">Crew</a>
+      <a href="#technical_aspects">Technical Aspects</a>
+      <!--This anchor element is for the javascript that will show the menu icon that will be present on smaller screens-->
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+      <!--This is the div for the search bar-->
+      <div class="search_container">
+      <!--The link in the action attribute is for the IMDb website search-->
+        <form action="https://www.imdb.com/find?q=" rel="search">
+          <!--name="q" comes from the IMDb website code in order for the search url to be formatted correctly-->
+          <input name="q" type="text" type="submit" placeholder="Search IMDb...">
+          <!--This adds a bit on the end of the input from the user to enable the search url to be correct for the IMDb website-->
+          <input type="hidden" name="ref_" value="nv_sr_sm">
+          <!--The i element is getting the search icon from the webiste in the head element-->
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    </nav>
+
+      <!--This bit of JavaScript is toggling between adding and removing the "responsive" class to the top navigation bar when the user clicks on the icon-->
+      <script>
+      function myFunction() {
+        var x = document.getElementById("myTopNav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+      </script>
+
+    <!--This <main> element is making it easier for the navigation bar and title block to be a different width to the main bit of the page-->
+    <main>
+
+      <!--Title section-->
+      <div class="title_block">
+        <!--Title line with year-->
+        <h1 id="title">
+          조선마술사 The Magician
+          <span id="year">
+            (2015)
+          </span>
+        </h1>
+        <!--The original title/pronounication-->
+        <div id="original_title">
+          Original title: Chosun Masoolsa
+        </div>
+        <!--Extra information about the film-->
+        <div class="sub_text">
+          <time>2h 2min</time>
+          <!--These "spacer" classes add a small gap and a line between each bit of information-->
+          <span class="spacer">|</span>
+            Drama, fantasy, romance
+          <span class="spacer">|</span>
+          30th December 2015 (South Korea)
+        </div>
+      </div>
+
+      <!--THIS IS WHERE ALL OF THE CONTENT WILL GO WITH THE CAST IMAGES AND AUDIO AND ALL THAT-->
+
+      <p style="padding: 0px 15px 1000px">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      <br>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+
+    </main>
+
+    <footer>
+      <p>Abbie Waterson P2450404
+      <br>
+      All of the information came from the IMDb website: <a href="https://www.imdb.com/title/tt4471636/">here</a></p>
+    </footer>
+
+  </body>
+</html>

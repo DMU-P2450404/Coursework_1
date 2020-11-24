@@ -1,0 +1,138 @@
+.top_nav {
+  background-color: #181b21;
+  overflow: hidden;
+}
+
+.top_nav a img {
+  float: left;
+  width: 40px;
+  margin-left: 30px;
+  margin-top: 4px;
+}
+
+.top_nav input {
+  float: right;
+  display: block;
+  width: 40%;
+  padding: 6px;
+  margin: 8px 0px 8px 0px; /*setting all of the margins in one line: top, right, bottom, left*/
+  border: none;
+  font-size: 17px;
+}
+
+.top_nav .search_container button:hover {
+  background: #ccc;
+}
+
+
+@media screen and (max-width: 425px) { /*This section means that the top navigation bar with be different when the screen is less than 425px wide. 425px being the standard large mobile width*/
+  .top_nav .search_container:not(:second-child) {display: none;}
+  .top_nav .search_container button #search_button_mobile {
+    float: right;
+    display: block;
+  }
+}
+
+/*Trying to make a responsive navigation bar with a search bar inside of it using this tutorial: https://www.w3schools.com/howto/howto_js_topnav_responsive.asp along with this one to make the search bar: https://www.w3schools.com/howto/howto_css_searchbar.asp*/
+@media screen and (max-width: 425px) {
+  .top_nav.responsive {position: relative;}
+  .top_nav.responsive .search_container button #search_button_mobile {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .top_nav.responsive input {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+  .top_nav .search_container button {
+    float: right;
+    padding: 6px 10px; /*setting all of the padding in one line: top and bottom, left and right*/
+    margin: 8px 16px 0px 0px; /*setting all of the margins in one line: top, right, bottom, left*/
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+  }
+  .top_nav input {
+    border: 1px soild #ccc
+  }
+}
+
+@media only screen and (min-width: 425px) {
+  .page_content {
+      margin: 0% 5%; /*setting all of the margins in one line: top and bottom, left and right unless the screen is less then 425px wide. In this case, the margin will not show*/
+  }
+}
+
+.spacer {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.title_block {
+  text-align: left;
+  background-color: #2a3140;
+  margin-top: -1px;
+  padding: 10px 0px 18px 20px; /*setting all of the padding in one line: top, right, bottom, left*/
+}
+
+#title {
+  color: #ffffff;
+  font-family: Nanum Gothic; /*I have only specificed one font as it comes from an exteral website. So it should work will all broswers*/
+  font-weight: 450;
+  margin-bottom: 1px;
+}
+
+#year {
+  color: #d4e2ff;
+  font-family: Nanum Gothic;
+  font-weight: 450;
+  font-size: 70%;
+}
+
+#original_title {
+  color: #d4e2ff;
+  font-family: Nanum Gothic;
+  font-weight: 450;
+  font-size: 65%;
+}
+
+.sub_text {
+  color: #d4e2ff;
+  font-family: Nanum Gothic;
+  font-weight: 450;
+  font-size: 65%;
+  margin-top: 2px;
+}
+
+/*Using this tutorial to create a navigation bar: https://www.w3schools.com/css/css_navbar_horizontal.asp IT IS NOT ALL THE WAY ACROSS!!!*/
+nav a {
+  position: sticky; /*this will make the navigation bar stay at the top of the page with the user scrolls down the page*/
+  background-color: rgb(16, 30, 56);
+  overflow: hidden;
+}
+
+nav a {
+  float: left;
+  color: white;
+  text-align: center;
+  font-family: Nanum Gothic; /*I have only specificed one font as it comes from an exteral website. So it should work will all broswers*/
+  font-size: 16px;
+  text-decoration: none; /*this removes the underline from hyperlinks that use the anchor element*/
+  padding: 7px;
+  width: 70px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+nav a:hover /*:hover defines when the user mouses over it*/ {
+  background-color: rgb(117, 177, 227);
+  color: black;
+}
+
+nav a.active {
+  background-color: rgb(26, 89, 207);
+}
