@@ -1,0 +1,107 @@
+/*Adding style to the main headings*/
+h2 {
+  font-size: 23pt;
+  font-weight: 500;
+  margin: 10px 0 -10px 0;
+}
+
+/*Adding style to the second headings*/
+h3 {
+  font-size: 17pt;
+  font-weight: 500;
+  margin-bottom: -10px;
+}
+
+/*Styling the third headings*/
+h4 {
+  font-size: 14pt;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+/*Adding style to the main cast table*/
+.main_cast table {
+  width: 100px;
+  border: solid 1px #f1dc92;
+  background-color: #dfe9ff;
+  margin-left: 5px;
+  float: right;
+}
+
+.main_cast table .table_heading {
+  text-align: center;
+  font-size: 110%;
+  padding-bottom: 0px;
+}
+
+/*Sizing the image in the table*/
+.main_cast table img {
+  width: 250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Styling the reference under the image in the table*/
+.main_cast table .reference {
+  display: block;
+  text-align: center;
+  font-size: 80%;
+}
+
+/*Adding style to the text of the table*/
+.main_cast table th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 3px 5px 5px 5px;
+  font-size: 90%;
+}
+
+/*Sizing the images in the image gallery section*/
+.main_cast .image_gallery img {
+  width: 500px;
+  margin-bottom: -15px;
+}
+
+/*Styling the references in the image gallery section*/
+.main_cast .image_gallery .reference {
+  font-size: 80%;
+}
+
+/*When the screen is less then 600px wide, the table will fit the screen rather than being at the side and the images are sized better and in the center rather than the left along with their references*/
+@media screen and (max-width: 600px) {
+  .main_cast table {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+  .main_cast .image_gallery img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+  .main_cast .image_gallery .reference {
+    text-align: center;
+  }
+}
+
+/*Adding style to the supporting cast table*/
+.supporting_cast table {
+  margin-top: 10px;
+}
+
+/*Sizing the images in the supporting cast table*/
+.supporting_cast table img {
+  width: 100px;
+}
+
+/*Sizing the cells for the supporting cast table*/
+.supporting_cast table td {
+  width: 200px;
+}
+
+.supporting_cast .reference {
+  margin-top: 0px;
+  font-size: 80%;
+}

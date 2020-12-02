@@ -8,17 +8,35 @@
 }
 
 #poster {
-  height: 260px;
-  float: left;
+  height: 300px;
   margin-right: 15px;
 }
 
-.PosterWithPlotSummary div {
-  /*float: left; Placing the plot next to the poster*/
+.plot_summary {
+  padding-right: 15px;
+}
+
+/*When the screen is less then 600px wide, the poster is placed in the center and the plot underneath as this looks better*/
+@media screen and (max-width: 600px) {
+  #poster {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .label {
   font-weight: bold;
+}
+
+/*When the screen is less than 600px, it will display the poster in the center of the page and the plot underneath rather than beside it*/
+@media screen and (max-width: 600px) {
+  .PosterWithPlotSummary {
+    display: block;
+  }
+  #poster {
+    height: 400px;
+  }
 }
 
 /*-------All of the following parts are for the trailers-------*/
@@ -53,7 +71,7 @@ figure video {
   height: auto;
 }
 
-/*When the screen is less then 600px wide, size of the video and options underneath are the width of the screem*/
+/*When the screen is less then 600px wide, size of the video and options underneath are the width of the screen*/
 @media screen and (max-width: 600px) {
   #video_player {
     width: 100%;

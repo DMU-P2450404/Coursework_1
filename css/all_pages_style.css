@@ -4,6 +4,15 @@
 .topnav {
   overflow: hidden;
   background-color: #181b21;
+  position: sticky;
+  top: 0;
+}
+
+/*Then the screen is less than 600px wide, the top nav bar with in stick to the top of the page*/
+@media screen and (max-width: 600px) {
+  .topnav {
+    position: static;
+  }
 }
 
 /*Styling the links in the navigation bar*/
