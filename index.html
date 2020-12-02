@@ -9,8 +9,11 @@
     <link href="https://fonts.google.com/specimen/Nanum+Gothic?subset=korean#standard-styles" rel="stylesheet" media="screen" type="text.css"/>
     <!--This will be used to get icons from this website-->
     <script src="https://use.fontawesome.com/a066ea0406.js"></script>
-    <!--This is linking to my external css file-->
-    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <!--This is linking to the external css files-->
+    <!--There are multiple for better organisation-->
+    <link href="css/general_style.css" rel="stylesheet" type="text/css"/>
+    <link href="css/all_pages_style.css" rel="stylesheet" type="text/css"/>
+    <link href="css/index_style.css" rel="stylesheet" type="text/css"/>
   </head>
   <body>
     <!--Creating a top navigation bar-->
@@ -82,7 +85,7 @@
       <!--Creating a section for the trailers-->
       <section class="trailers">
         <h2>Trailers</h2>
-          <!--<figure> element used so I can add a <figcaption> element to the video-->
+          <!--<figure> element used so I can add a <figcaption> element to the video which allows the selection to play above the options. I tried to use <ul> for the options instead but the video would open in new window. The <section> simulates the <li> of a <ul>-->
           <figure id="video_player">
             <video controls="true" poster="vid/eng_cover.png" id="video">
               <source src="vid/Trailer_Eng_Sub.ogv" type="video/ogg"/>
@@ -100,6 +103,7 @@
                     <span class="duration">00:43</span>
                     <p class="description">Korean audio with English subtitles</p>
                     <p class="source">Cover sourced from: Asian Film</p>
+                    <!--Putting the links as a comments as they were sitting over themselves on the page and I couldn't sort it-->
                     <!--https://asian-film.com/en/chosun-masoolsa/-->
                     <p class="source">Video sourced from: YouTube</p>
                     <!--https://www.youtube.com/watch?v=HxBZ_Xtfii4-->

@@ -1,49 +1,4 @@
-/*Makes everything touch the edges of the screen*/
-body {
-  margin: 0;
-  font-family: Nanum Gothic;
-  background-color: #828fab;
-}
-
-/*Making all of the main content sit away from the edge of the screen (for when the screen is wider than 600px)*/
-main {
-    margin: 0 10%;
-    background-color: white;
-    padding: 0 15px 5px 15px;
-}
-
-/*Making it so there is no margins at the sides of the main content (in the <main> element) when the screen is less then 600px wide*/
-@media screen and (max-width: 600px) {
-  main {
-    margin: 0%;
-  }
-}
-
-/*Fixing the height issues with the floating elements*/
-.floatfix::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-/*Styling all links besides the menu items*/
-/*Styling the link in the footer*/
- main a {
-   text-decoration: none;
-   color: rgb(0, 87, 161);
- }
-/*Styling the link in the footer so the colour does not change if the user has visited the link*/
- main a:visited {
-   color: rgb(0, 87, 161);
- }
- /*Styling the link in the footer so when the user hovers over it, the changes colour*/
- main a:hover {
-   color: rgb(0, 142, 255);
- }
-
-
 /*-------All the following parts are for the top navigation and search bar-------*/
-/*-------This is on every page-------*/
 
 /*Adding a background colour to the top navigation*/
 .topnav {
@@ -185,7 +140,6 @@ main {
 
 
 /*-------All of the following parts are for title section-------*/
-/*-------This is on every page-------*/
 
 /*Setting the styling for the "spacer"*/
 .spacer {
@@ -230,7 +184,6 @@ main {
 
 
 /*-------All of the following parts are for the footer-------*/
-/*-------This is on every page-------*/
 
 /*Styling the footer*/
  footer {
@@ -262,133 +215,3 @@ main {
  footer a:hover {
    color: rgb(201, 231, 255);
  }
-
-
-/*-------All of the following parts are for poster with plot summary section-------*/
-/*-------This is on the index page (about page)-------*/
-
-.PosterWithPlotSummary {
-  border-bottom: solid 1px #f1dc92;
-  background-color: #dfe9ff;
-  margin: 0 -15px 0 -15px; /*-15px for the left and right to conteract the padding in the <main> element stated at the top of this file*/
-  display: inline-flex; /*setting up the flex box with the content not starting on the next line*/
-}
-
-#poster {
-  height: 260px;
-  float: left;
-  margin-right: 15px;
-}
-
-.PosterWithPlotSummary div {
-  /*float: left; Placing the plot next to the poster*/
-}
-
-.label {
-  font-weight: bold;
-}
-
-/*-------All of the following parts are for the trailers-------*/
-/*-------This is on the index page (about page)-------*/
-
-/*Adding style to the heading elements in the trailers section*/
-.trailers h2 {
-  font-size: 23pt;
-  font-weight: 500;
-  margin: 10px 0 -10px 0;
-}
-
-/*Creating the playlist*/
-#video_player {
-  display: table;
-  line-height: 0;
-  border: solid 1px #f1dc92;
-  width: 60%;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/*Displaying the selected video and the options of videos under each other*/
-#video_player video,
-#video_player figcaption {
-  display: table-row;
-}
-
-/*Styling the selected video*/
-figure video {
-  width: 100%;
-  height: auto;
-}
-
-/*When the screen is less then 600px wide, size of the video and options underneath are the width of the screem*/
-@media screen and (max-width: 600px) {
-  #video_player {
-    width: 100%;
-  }
-}
-
-#video_player figcaption {
-  overflow-y: auto;
-  list-style: none;
-}
-
-/*Styling the options under the selected video*/
-#video_player figcaption section {
-  width: 100%;
-  height: 100%;
-  display: inline-block;
-  margin-top: 10px;
-  background-color: #dfe9ff;
-}
-
-/*Displaying the option and its text correctly*/
-#video_player figcaption a {
-  display: block;
-}
-
-/*Changing the colour of the option when the user hovers over it*/
-#video_player figcaption section:hover {
-  background-color: rgb(0, 142, 255);
-}
-
-/*Styling the thumbnail for the options*/
-#video_player .thumbnail {
-  height: 65px;
-  float: left;
-  margin: 5px;
-}
-
-/*Positioning the information for each option*/
-#video_player .thumbnail_info {
-  position: relative;
-  top: 14px;
-  height: 100%;
-}
-
-/*Styling the title of the videos in the options*/
-#video_player .thumbnail_title {
-  color: black;
-  font-weight: bold;
-}
-
-/*Styling and positioning the duration of the video options*/
-#video_player .duration {
-  float: right;
-  color: black;
-  margin-right: 5px;
-}
-
-/*Styling the description of the options*/
-#video_player .description {
-  color: black;
-  font-size: 10pt;
-  margin-top: 18px;
-}
-
-/*Styling the source reference in the video options*/
-#video_player .source {
-  color: black;
-  font-size: 7pt;
-  margin-top: 15px;
-}
