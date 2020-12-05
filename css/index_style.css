@@ -23,6 +23,10 @@
     margin-left: auto;
     margin-right: auto;
   }
+  .plot_summary {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 }
 
 .label {
