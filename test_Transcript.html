@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--Adding ko after lang defines the page as being in Korean as well as English-->
+<html lang="en, ko" dir="ltr">
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>[Test] Transcript</title>
+    <!--These links are for a Korean fonts-->
+    <link href="https://fonts.googleapis.com/earlyaccess/nanummyeongjo.css" rel="stylesheet" media="screen" type="text/css"/>
+    <link href="https://fonts.google.com/specimen/Nanum+Gothic?subset=korean#standard-styles" rel="stylesheet" media="screen" type="text.css"/>
+    <!--This will be used to get icons from this website-->
+    <script src="https://use.fontawesome.com/a066ea0406.js"></script>
+    <!--This is linking to my external css file-->
+    <link href="css/test_style_Trailers.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <!--This <main> element is making it easier for the navigation bar and title block to be a different width to the main bit of the page-->
+    <main>
+
+      <!--Title section-->
+      <div class="title_block">
+        <!--Title line with year-->
+        <h1 id="title">
+          조선마술사 The Magician
+          <span id="year">
+            (2015)
+          </span>
+        </h1>
+        <!--The original title/pronounication-->
+        <div id="original_title">
+          Original title: Chosun Masoolsa
+        </div>
+        <!--Extra information about the film-->
+        <div class="sub_text">
+          <time>2h 2min</time>
+          <!--These "spacer" classes add a small gap and a line between each bit of information-->
+          <span class="spacer">|</span>
+            Drama, fantasy, romance
+          <span class="spacer">|</span>
+          30th December 2015 (South Korea)
+        </div>
+      </div>
+
+      <!--Creating a section for the poster and the plot summary-->
+      <section class="PosterWithPlotSummary floatfix">
+        <!--<div> for the poster-->
+        <div class="floatfix">
+          <img src="img/poster.jpg" alt="The Magician poster" id="poster"/>
+        </div>
+        <!--<div> for the plot summary-->
+        <div class="plot_summary">
+          <p>During the Joseon dynasty in Korea, the princess travels to the Qing to have a beneficial marriage. On her journey to the Qing, she meets and falls in love with a magician.</p>
+          <p><span class="label">Director: </span><a href="https://www.imdb.com/name/nm0453413/?ref_=fn_al_nm_1">Dae-seung Kim</a></p>
+          <p><span class="label">Writer: </span><a href="https://www.imdb.com/name/nm8694244/?ref_=fn_al_nm_2">Won-Tae Lee</a> (original writer)</p>
+          <p><span class="label">Stars: </span><a href="https://www.imdb.com/name/nm2270541/?ref_=fn_al_nm_1">Ara Go</a>, <a href="https://www.imdb.com/name/nm1235558/?ref_=fn_al_nm_1">Seung-ho Yoo</a></p>
+        </div>
+      </section>
+
+      <!--Creating a section for the trailers-->
+      <section class="audio">
+        <h2>Audio</h2>
+        <audio controls="true">
+          <source src="aud/Yoo_Seung_Ho_interview.mp3" type="audio/mpeg"/>
+          <!--<source src="aud/Yoo_Seung_Ho_interview.ogg" type="audio/ogg"/>
+          <source src="aud/Yoo_Seung_Ho_interview.wav" type="audio/wav"/>
+          <source src="aud/Yoo_Seung_Ho_interview.mp3" type="audio.mpeg"/>-->
+          <!--This <track> element is adding the transcript to the audio files-->
+          <track src="trans/Yoo_Seung_Ho_interview_captions.vtt" kind="subtitles" srclang="en" label="English"/>
+          <track src="trans/Yoo_Seung_Ho_interview_captions.vtt" kind="subtitles" srclang="ko" label="Korean"/>
+        </audio>
+
+        <web-app>
+          <mime-mapping>
+            <extension>vtt</extension>
+            <mime-type>text/vtt</mime-type>
+          </mime-mapping>
+        </web-app>
+
+      </section>
+
+    </main>
+
+    <footer>
+      <p>Abbie Waterson P2450404
+      <br>
+      All of the information came from the IMDb website: <a href="https://www.imdb.com/title/tt4471636/">here</a></p>
+    </footer>
+
+  <!--Linking to the extental JavaScript file-->
+  <script src="script/test_script_Trailers.js"></script>
+
+  </body>
+</html>

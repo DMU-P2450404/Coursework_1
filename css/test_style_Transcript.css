@@ -1,0 +1,163 @@
+/*Makes everything touch the edges of the screen*/
+body {
+  margin: 0;
+  font-family: Nanum Gothic;
+  background-color: #828fab;
+}
+
+/*Making all of the main content sit away from the edge of the screen (for when the screen is wider than 600px)*/
+main {
+    margin: 0 10%;
+    background-color: white;
+    padding: 0 15px 5px 15px;
+}
+
+/*Making it so there is no margins at the sides of the main content (in the <main> element) when the screen is less then 600px wide*/
+@media screen and (max-width: 600px) {
+  main {
+    margin: 0%;
+  }
+}
+
+/*Fixing the height issues with the floating elements*/
+.floatfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/*Styling all links besides the menu items*/
+/*Styling the link in the footer*/
+ main a {
+   text-decoration: none;
+   color: rgb(0, 87, 161);
+ }
+/*Styling the link in the footer so the colour does not change if the user has visited the link*/
+ main a:visited {
+   color: rgb(0, 87, 161);
+ }
+ /*Styling the link in the footer so when the user hovers over it, the changes colour*/
+ main a:hover {
+   color: rgb(0, 142, 255);
+ }
+
+
+/*-------All of the following parts are for title section-------*/
+/*-------This is on every page-------*/
+
+/*Setting the styling for the "spacer"*/
+.spacer {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/*Styling the background, text alignment, font and font weight*/
+.title_block {
+  background-color: #2a3140;
+  margin: -1px -15px 0 -15px; /*-15px for the left and right to conteract the padding in the <main> element stated at the top of this file*/
+  padding: 10px 0px 18px 20px; /*top, right, bottom, left*/
+  font-family: Nanum Gothic; /*I have only specificed one font as it comes from an external website. So it should work with all browsers*/
+  font-weight: 450;
+}
+
+/*Styling the title (main heading for the page <h1>)*/
+#title {
+  color: #ffffff;
+  margin-bottom: 1px;
+  font-weight: 450;
+}
+
+/*Styling the year (on the same line as the title <h1>)*/
+#year {
+  color: #d4e2ff;
+  font-size: 70%;
+}
+
+/*Styling the original title (underneath the title line)*/
+#original_title {
+  color: #d4e2ff;
+  font-size: 65%;
+}
+
+/*Styling the "sub text" class (underneath the original title line)*/
+.sub_text {
+  color: #d4e2ff;
+  font-size: 65%;
+  margin-top: 2px;
+}
+
+
+/*-------All of the following parts are for the footer-------*/
+/*-------This is on every page-------*/
+
+/*Styling the footer*/
+ footer {
+   background-color: #181b21;
+   color: #f2f2f2;
+   margin-bottom: -16px;
+   margin-top: -16px;
+ }
+
+/*Styling the paragraph elements in the footer*/
+ footer p {
+   text-align: center;
+   padding: 14px 16px; /*top and bottom, then left and right*/
+   font-size: 16px;
+ }
+
+/*Styling the link in the footer*/
+ footer a {
+   text-decoration: none;
+   color: rgb(117, 177, 227);
+ }
+
+/*Styling the link in the footer so the colour does not change if the user has visited the link*/
+ footer a:visited {
+   color: rgb(117, 177, 227);
+ }
+
+ /*Styling the link in the footer so when the user hovers over it, the changes colour*/
+ footer a:hover {
+   color: rgb(201, 231, 255);
+ }
+
+
+/*-------All of the following parts are for poster with plot summary section-------*/
+/*-------This is on the index page (about page)-------*/
+
+.PosterWithPlotSummary {
+  border-bottom: solid 1px #f1dc92;
+  background-color: #dfe9ff;
+  margin: 0 -15px 0 -15px; /*-15px for the left and right to conteract the padding in the <main> element stated at the top of this file*/
+  display: inline-flex; /*setting up the flex box with the content not starting on the next line*/
+}
+
+#poster {
+  height: 260px;
+  float: left;
+  margin-right: 15px;
+}
+
+.PosterWithPlotSummary div {
+  /*float: left; Placing the plot next to the poster*/
+}
+
+.label {
+  font-weight: bold;
+}
+
+/*-------All of the following parts are for the trailers-------*/
+/*-------This is on the index page (about page)-------*/
+/*Adding style to the heading elements in the trailers section*/
+.audio h2 {
+  font-size: 23pt;
+  font-weight: 500;
+  margin: 10px 0 -10px 0;
+}
+
+.audio track {
+  visibility: visible;
+  background-color: red;
+  color: black;
+  
+}

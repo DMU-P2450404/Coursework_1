@@ -57,6 +57,18 @@ h4 {
   font-size: 90%;
 }
 
+/*Sizing the audio element*/
+.main_cast .interview audio {
+  width: 50%;
+}
+
+/*Sizing the audio elements so when the screen is less than 600px wide, it will be 100% width rather than 50%*/
+@media screen and (max-width: 600px) {
+  .main_cast .interview audio {
+    width: 100%;
+  }
+}
+
 /*Sizing the images in the image gallery section*/
 .main_cast .image_gallery img {
   width: 500px;
